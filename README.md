@@ -1,6 +1,6 @@
 # A library for nodejs
 
-`aws-ecs-metadata-node` is a NodeJS library to fetch and retrieve the meta data of a ECS service.
+`aws-ecs-metadata-node` is a NodeJS library to fetch and retrieve the meta data of a ECS service. There's also [another version built for golang](https://github.com/BrunoScheufler/aws-ecs-metadata-go) by [Bruno Scheufler](https://github.com/BrunoScheufler)
 
 ## Installation
 
