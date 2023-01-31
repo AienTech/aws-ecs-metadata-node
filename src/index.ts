@@ -11,9 +11,9 @@ export const CurrentEcsVersion = (): EcsVersion => {
 	const { ECS_CONTAINER_METADATA_URI, ECS_CONTAINER_METADATA_URI_V4 } = process.env;
 
 	switch (true) {
-		case ECS_CONTAINER_METADATA_URI_V4 !== "":
+		case !!ECS_CONTAINER_METADATA_URI_V4:
 			return EcsVersion.V4;
-		case ECS_CONTAINER_METADATA_URI !== "":
+		case !!ECS_CONTAINER_METADATA_URI:
 			return EcsVersion.V3;
 		default:
 			throw new Error(`cannot determine ecs instance version`);
