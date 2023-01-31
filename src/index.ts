@@ -1,5 +1,6 @@
-export * as v3 from './v3';
-export * as v4 from './v4';
+import * as v3 from './v3';
+import * as v4 from './v4';
+export { v3, v4 };
 
 export enum EcsVersion {
 	V3 = 'v3',
@@ -17,4 +18,13 @@ export const CurrentEcsVersion = (): EcsVersion => {
 		default:
 			throw new Error(`cannot determine ecs instance version`);
 	}
+};
+
+export const CurrentFetchMetaData = () => {
+	let fn: () => Promise<v3.MetaData | v4.MetaData> = v4.fetchMetaData;
+	switch (CurrentEcsVersion()) {
+		case EcsVersion.V3:
+			fn = v3.fetchMetaData;
+	}
+	return fn();
 };
