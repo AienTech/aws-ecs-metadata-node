@@ -33,6 +33,8 @@ v4().then((res) => {
 });
 ```
 
+An `aws-ecs-metadata-node` bin is also provided, which will log the discovered metadata as JSON.
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 

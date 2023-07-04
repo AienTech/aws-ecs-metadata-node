@@ -4,6 +4,7 @@
   "description": "A tool to retrieve AWS ECS Task metadata",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "bin": "./lib/bin.js",
   "repository": "https://github.com/AienTech/aws-ecs-metadata-node",
   "author": "Aien Saidi",
   "license": "MIT",
